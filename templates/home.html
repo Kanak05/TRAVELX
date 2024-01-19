@@ -1,0 +1,869 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+    <div class="bg bg1">
+        <div class="hero-content">
+            <h1>Discover &amp; Book</h1>
+            <h2>Perfect Tour Package for Your Holidays</h2>
+
+            <form method="POST" >
+                {%csrf_token%}
+            <div class="quick-form">
+                <!-- <div class="input-box">
+                    <span class="material-icons">location_city</span> 
+                    <label for="city-from"><b>From City</b></label>
+                    <input id="city-from" type="text" autocomplete="off" name="cityfrom" placeholder="City?"
+                        class="fs14">
+                </div> -->
+                <div class="input-box">
+                    <!-- <span class="material-icons">location_on</span> -->
+                    <label for="city-to"><b>Destination</b></label>
+                    <input id="city-to" type="text" autocomplete="off" name="city-to"
+                        placeholder="where to go?" class="fs14">
+                </div>
+                <div class="input-box">
+                    <!-- <span class="material-icons">calendar_month</span> -->
+                    <label for="date-input"><b>Date</b></label>
+                    <input type="date" id="Date" value="yyyy-mm-dd" name = "date">
+                </div>
+                <div class="input-box">
+                    <!-- <span class="material-icons">timelapse</span> -->
+                    <label for="num-of-days" placeholder="" name="days"><b>Duration</b></label>
+                    <div class="night">
+                        <!-- <button class="minus-btn">-</button> -->
+                        <input type="number" class="night-input" value="" min="1" name="num_of_days">
+                        <!-- <span class="day-text fc2 fs14">Day(s)</span> -->
+                        <!-- <button class="plus-btn">+</button> -->
+                    </div>
+                </div>
+                <!-- <div class="input-box"> -->
+                    <!-- <span class="material-icons">filter_alt</span> -->
+                    <!-- <label for="fi/lter">Filter</label> -->
+                    <!-- <div class="filter fs12 fc2 cp" onclick="toggleDropdown('filterSearch')"> -->
+                        <!-- <span class="btn-st fs14">Select</span><span class="material-icons">expand_more</span> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <div class="quik-form-btn">
+                    <button type="submit" class="quik-sbmt-btn searchdataa box-centr transit-2s cp">
+                        Search
+                    </button>
+                </div>
+            
+            </div></form>
+            <div class="state-suggest">
+                <ul id="city-from-suggestion-list" class="suggestion-list"></ul>
+            </div>
+            <div class="state-suggest">
+                <ul id="city-to-suggestion-list" class="suggestion-list"></ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- {%for results in result%} -->
+    <!-- <div style="background-color: black; height: 150px;">
+     <a href={{results.link}} style="color: white;">{{results.destination}}</a>
+    </div> -->
+<section>
+    {%for results in result%}
+    <div class="card" style="width: 25rem; height : 380px">
+        <img class="card-img-top" src={{results.img}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{results.destination}}</h5>
+          <p class="card-text">{{results.details}}</p>
+          <button class="btn btn-primary"><a href={{results.link}}>VIEW</button></a>
+        </div>
+      </div>
+    {%endfor%}
+
+</section>
+    <!-- {%endfor%} -->
+
+    <section id="tranding">
+    <div class="carousel-gap">
+        <h3>Popular Destinations</h3>
+    </div>
+
+    <!-- <section id="tranding"> -->
+        <div class="container">
+            <!-- <h1 class="text-center section-heading">Tranding food</h1> -->
+        </div>
+        <div class="container">
+            <div class="swiper tranding-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/goa/goa.html"> 
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/BeachFun.jpg" alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Goa</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    32,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/ooty/ooty.html"> 
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/Botanical_Gardens_-_Ootacamund_(Ooty)_-_India_03.jpg" alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Ooty</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    39,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/kerala/kerala.html"> 
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/iStock-472909442.jpg" alt="Tranding">
+                        </div>c 
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Kerela</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    44,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/rajasthan/rajasthan.html"> 
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/raj.jpg"
+                                alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Rajasthan</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    49,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/sikkim/sikkim.html">
+                        <div class="tranding-slide-img">
+                            <img src="https://cdn3.i-scmp.com/sites/default/files/styles/landscape/public/images/methode/2018/10/10/e2c23cf2-cc47-11e8-9460-2e07e264bd11_1280x720_131013.jpg?itok=K6vx4yO-" alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Sikkim</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    38,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/Kedarnath/kedarnath.html"> 
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/08_05_375452717kedarnath2.jpg" alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Kedarnath</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    65,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <a href="../static/Banglore/bang.html">
+                        <div class="tranding-slide-img">
+                            <img src="../static/homeimages/GettyImages-536116268-5b5d74e846e0fb0050adcf3b.jpg" alt="Tranding">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price">Banglore</h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h4 class="food-name">
+                                    59,999₹
+                                </h4>
+
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+               
+                </div>
+
+                <div class="tranding-slider-control">
+                    <div class="swiper-button-prev slider-arrow">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </div>
+                    <div class="swiper-button-next slider-arrow">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../static/script.js"></script>
+
+
+    <div class="mycarousel">
+        <h3>Popular Religious Places</h3>
+    </div>
+
+
+    <div id="myCarousel" class="owl-carousel owl-theme my-3">
+        <div class="card shadow my-3">
+            <a href="../static/golden/golden.html">
+            <img src="../static/homeimages/this-sanctum-sanctorum.jpg" class="card-img-top" height="300" alt="Image 1" />
+            <div class="card-body">
+                <h5 class="card-title">Golden Temple</h5>
+                <p class="card-text">
+                    The Golden temple is famous for its full golden dome, it is one of the most sacred pilgrim spots for
+                    Sikhs.
+                </p>
+            </div></a>
+        </div>
+        <div class="card shadow my-3">
+            <a href="../static/prem.html">
+            <img src="../static/homeimages/prem-mandir-in-vrindavan-temple-of-divine-love-92869703.webp" class="card-img-top" alt="Image 2"
+                height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Prem Mandir</h5>
+                <p class="card-text">
+                    Prem Mandir, famously known as The Temple of Divine Love is one of the most sought after tourist
+                    attractions at Vrindavan.
+                </p>
+            </div>
+            </a>
+        </div>
+        <div class="card shadow my-3">
+            <a href="sun_temple.html">
+            <img src="../static/homeimages/konark.jpg " class="card-img-top" alt="Image 3" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Sun Temple</h5>
+                <p class="card-text">
+                    Sun Temple, also called Surya Deula or Surya Deul, temple in Konark, Odisha state, India, that is
+                    dedicated to the Hindu sun god Surya
+                </p>
+            </div>
+           </a>
+        </div>
+        <div class="card shadow my-3">
+            <a href="varanasi.html">
+            <img src="../static/homeimages/Ganga-Aarti-Varanasi-1.jpg " class="card-img-top" alt="Image 4" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Varanasi</h5>
+                <p class="card-text">
+                    Varanasi is a city on the Ganges river in northern India that has a central place in the traditions
+                    of pilgrimage, death, and mourning in the Hindu world
+                </p>
+            </div></a>
+        </div>
+        <div class="card shadow my-3">
+            <a href="Dwarka.html">
+            <img src="../static/homeimages/top-places-to-visit-in-dwarka-on-a-one-day-trip.jpg" class="card-img-top" alt="Image 5"
+                height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Dwarka</h5>
+                <p class="card-text">
+                    An ancient and prosperous city believed to have been the capital of Lord Krishna's kingdom, Dwarka
+                    is an important pilgrimage centre for Hindus from all over the world. It is located on the western
+                    coast of Gujarat, on the banks of River Gomti. </p>
+            </div>
+        </a>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myCarousel').owlCarousel({
+                items: 3, // Number of cards shown in each slide
+                loop: true, // Continuously loop the carousel
+                margin: 20, // Space between cards
+                nav: true, // Show navigation buttons
+                navText: [
+                    "<i class='fas fa-chevron-left'></i>",
+                    "<i class='fas fa-chevron-right'></i>",
+                ], // Custom navigation icons
+                responsive: {
+                    0: {
+                        items: 1, // Number of cards shown in the carousel for smaller screens
+                    },
+                    768: {
+                        items: 2, // Number of cards shown in the carousel for medium screens
+                    },
+                    992: {
+                        items: 3, // Number of cards shown in the carousel for large screens
+                    },
+                },
+            });
+        });
+    </script>
+
+    
+
+    <div class="cards">
+        
+
+        <h3>Holiday Themes</h3>
+    </div>
+
+
+    <div class="container2">
+        <a href="../static/adventure/adventure.html">
+        <div class="card1">
+            <h3 class="title" style="color: black;"><b>ADVENTURE</b></h3>
+            <img src="../static/homeimages/TELEMMGLPICT000297198535_trans_NvBQzQNjv4BqRo0U4xU-30oDveS4pXV-Vv4Xpit_DMGvdp2n7FDd82k.webp">
+            
+            <!-- <div class="bar">
+        <div class="emptybar"></div> 
+        <div class="filledbar"></div> 
+      </div>  -->
+        </div></a>
+        <a href="../templates/wildlife.html">
+        <div class="card1">
+            <h3 class="title" style="color: black;"><b>WILDLIFE</b></h3>
+            <img src="../static/homeimages/WILDLIFE.jpg">
+        </div></a>
+        <a href="nature.html">
+        <div class="card1">
+            <h3 class="title" style="color: rgb(6, 6, 6);"><b>NATURE</b></h3>
+            <img src="../static/homeimages/NATURE.jpg">
+        </div></a>
+        <a href="beach.html">
+        <div class="card1">
+            <h3 class="title" style="color: black;"><b>BEACH</b></h3>
+            <img src="../static/homeimages/wtqqnkYDYi2ifsWZVW2MT4.jpg">
+        </div></a>
+        <a href="hill.html">
+        <div class="card1">
+            <h3 class="title" style="color: black;"><b>HILL STATION</b></h3>
+            <img src="../static/homeimages/hills-station-india.jpg">
+        </div></a>
+
+    </div>
+
+    <div class="stories">
+        <h3>Stories, Tips, and Guides</h3>
+    </div>
+
+
+
+
+
+
+
+    <div class="main">
+
+        <!--cards -->
+
+        <div class="card2">
+            <a href="varanasi.html">
+            <div class="image">
+                <img src="../static/homeimages/other-notable-ghats-present-in-varanasi-1.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>"Mystical Varanasi: Where Spirituality Meets Chaos"</b> <br>
+                    Explore the spiritual heart of India in Varanasi, where ancient ghats along the Ganges River provide
+                    a glimpse into Hindu rituals and ceremonies. Discover hidden temples, witness mesmerizing Ganga
+                    Aarti, and savor delectable street food</p>
+
+            </div></a>
+        </div>
+        <!--cards -->
+
+
+        <div class="card2">
+            <a href="../static/kerala/kerala.html">
+            <div class="image">
+                <img src="../static/homeimages/3e666a307990dfc3f3f379c4a66cc65d.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>"Surviving the Spices: A Food Lover's Guide to South India"</b> <br>
+                    Discover the diverse and flavorful cuisine of South India, from dosas and idlis to spicy curries.
+                    Learn how to navigate the rich culinary landscape and where to find the best local dishes.</p>
+
+            </div></a>
+        </div>
+        <!--cards -->
+
+
+        <div class="card2">
+
+            <div class="image">
+                <img src="../static/homeimages/32d87469f71b5af4e498df35485d04c0.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>"Golden Triangle: Exploring Delhi, Agra, and Jaipur"</b> <br>
+                    Plan your visit to India's Golden Triangle, covering the iconic cities of Delhi, Agra, and Jaipur.
+                    Discover the Taj Mahal, historic forts, bustling markets, and architectural marvels.</p>
+
+            </div>
+        </div>
+        <!--cards -->
+
+
+        <div class="card2">
+            <a href="../static/rajasthan/rajasthan.html">
+            <div class="image">
+                <img src="../static/homeimages/th.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>Royal Rajasthan: A Journey Through the Land of Maharajas"</b> <br>
+                    Embark on a regal adventure through Rajasthan, India's "Land of Kings." Visit opulent palaces, take
+                    camel safaris in the Thar Desert, and immerse yourself in the vibrant culture and traditions of
+                    Rajasthan.</p>
+
+            </div></a>
+        </div>
+        <!--cards -->
+
+
+        <div class="card2">
+
+            <div class="image">
+                <img src="../static/homeimages/rain-in-goa-Cropped.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>"Monsoon Magic: Traveling in India's Rainy Season"</b><br>
+                    Get tips on traveling during the monsoon season in India. Learn about destinations that come alive
+                    with lush greenery, enjoy the pleasant weather, and explore off-the-beaten-path places.</p>
+
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card2">
+
+            <div class="image">
+                <img src="../static/homeimages/himalayas.jpg">
+            </div>
+
+            <div class="des">
+                <p><b>"Trekking in the Himalayas: A Guide to the Best Trails"</b><br>
+                    For adventure seekers, this guide provides information on the best trekking routes in the Indian
+                    Himalayas, including popular trails like Roopkund, Hampta Pass, and Valley of Flowers.</p>
+
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card2">
+
+            <div class="image">
+                <img src="../static/homeimages/darjeeling-tea-plantations_1497874481.jpg">
+            </div>
+
+            <div class="des">
+                <p><b> "Tea Trails of Darjeeling: Sipping Serenity in the Himalayas"</b><br>
+                    Experience the tranquil beauty of Darjeeling's tea plantations nestled in the Himalayan foothills.
+                    Learn about the art of tea production, take nature walks through lush forests, and enjoy
+                    breathtaking views of the Kangchenjunga Range.
+            </div>
+        </div>
+        <!--cards -->
+
+
+        <div class="card2">
+
+            <div class="image">
+                <img src="../static/homeimages/39351984.jpg">
+            </div>
+
+            <div class="des">
+                <p><b> "Cultural Etiquette: Navigating India's Diverse Traditions"</b><br>
+                    Understand the cultural norms and etiquette when visiting India, from respecting religious sites to
+                    appropriate dress codes. This guide helps travelers show cultural sensitivity and appreciation.
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="event">
+            <h3>Latest Events & Festivals</h3>
+        </div>
+
+
+
+        <section class="contain">
+            {% for obj in fest %}
+            <div class="it act" style="background-image: url({{obj.fest_img}});">
+                <div class="dec">
+                    <h3>{{obj.fest_name}}</h3>
+                    <p>{{obj.fest_desc}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="it act" style="background-image: url(https://www.blueosa.com/wp-content/uploads/2014/11/10-hindu-gods-you-should-know.jpg);">
+                <div class="dec">
+                    <h3>Ganesh Chaturthi</h3>
+                    <p>Ganesh Chaturthi, also known as Vinayak Chaturthi or Ganeshotsav, is a Hindu festival that
+                        tributes Hindu deity Ganesha. The festival is marked with the installation of Ganesha's clay
+                        murtis privately in homes and publicly on elaborate pandals .</p>
+                </div>
+            </div> -->
+            <!-- <div class="it"
+                style="background-image: url(https://www.nativeplanet.com/img/2023/08/untitleddesign-2023-08-21t124604-491-1692602338.jpg);">
+                <div class="dec">
+                    <h3>Durga Pooja</h3>
+                    <p>Durga Puja also known as Durgotsava or Sharodotsav, is an annual Hindu festival originating in
+                        the Indian subcontinent which reveres and pays homage to the Hindu goddess Durga and is also
+                        celebrated because of Durga's victory over Mahishasura.</p>
+                </div>
+            </div>
+            <div class="it" style="background-image: url(https://i.ndtvimg.com/i/2017-10/golden-temple-diwali_650x400_71508582447.jpg);">
+                <div class="dec">
+                    <h3>Diwali</h3>
+                    <p>Diwali is the Hindu festival of lights with its variations also celebrated in other Indian
+                        religions. It symbolises the spiritual "victory of light over darkness, good over evil, and
+                        knowledge over ignorance". </p>
+                </div>
+            </div>
+            <div class="it" style="background-image: url(https://i5.walmartimages.com/asr/2ce5fe95-2580-428b-94bf-4d8cb3492a8a_1.ced059614f0f1ae7a26f5c2c6a5dea9b.jpeg);">
+                <div class="dec">
+                    <h3>Christmas</h3>
+                    <p>Christmas is an annual festival commemorating the birth of Jesus Christ, observed primarily on
+                        December 25 [a] as a religious and cultural celebration among billions of people around the
+                        world.</p>
+                </div>
+            </div>
+            <div class="it" style="background-image: url(https://c2.staticflickr.com/6/5538/10308897475_a4860d8b69_b.jpg);">
+                <div class="dec">
+                    <h3>Dussehra</h3>
+                    <p>Dussehra, also called Dasara or Vijayadashami, in Hinduism, holiday marking the triumph of Rama,
+                        an avatar of Vishnu, over the 10-headed demon king Ravana, who abducted Rama’s wife, Sita.</p>
+                </div>
+            </div>
+            <div class="it"
+                style="background-image: url(https://images.newindianexpress.com/uploads/user/imagelibrary/2018/10/15/original/PTI10_15_2018_000048B.jpg);">
+                <div class="dec">
+                    <h3>Navratri</h3>
+                    <p>Navratri Utsav falls in lunar month Ashwin during Sharad Ritu (Sept-oct). All nine days during
+                        Navratri are dedicated to nine forms of goddess Shakti. Ras garba is played by the people where
+                        they enjoy. Devotees offer Pooja, keeps fast. Navratri is a very religious festival.</p>
+                </div>
+            </div> -->
+
+        </section>
+
+        <script>
+            const ITEMS = document.querySelectorAll('.it')
+
+            ITEMS.forEach(item => {
+                item.addEventListener('click', () => {
+                    removeActionClasses()
+                    item.classList.add('act')
+                })
+            })
+
+            function removeActionClasses() {
+                ITEMS.forEach(item => {
+                    item.classList.remove('act')
+                })
+            }
+        </script>
+
+
+
+
+        <div class="events">
+            <h3>Most Popular Packages</h3>
+        </div>
+
+            <div class="si-co">
+                <div class="si">
+                    <div class="ca">
+                        <img src="../static/homeimages/1587155104_manali.jpg" alt="Package 1">
+                        <h2>10 days Kullu-Manali Package</h2>
+                        <p>Description for Package 1</p>
+                        <a href="../static/goa/package/popular1.html">Learn More</a>
+                    </div>
+                    <div class="ca">
+                        <img src="../static/homeimages/Vogue-guide-to-Goa.webp" alt="Package 2">
+                        <h2>4 Days Amazing Goa Tour</h2>
+                        <p>Description for Package 2.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="ca">
+                        <img src="../static/homeimages/1468473509.Ooty_Lake.jpg" alt="Package 2">
+                        <h2>Adventures 6 Day Trip In Ooty </h2>
+                        <p>Description for Package 2.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="ca">
+                        <img src="../static/homeimages/15574063212.png" alt="Package 2">
+                        <h2>Religious Trip To Kedarnath</h2>
+                        <p>Description for Package 2.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <!-- Add more cards here -->
+                </div>
+                <button class="previ">&#10094;</button>
+                <button class="nexti">&#10095;</button>
+            </div>
+
+            <script>
+                const slider = document.querySelector(".si");
+                const prevBtn = document.querySelector(".previ");
+                const nextBtn = document.querySelector(".nexti");
+    
+                let scrollPosition = 0;
+    
+                nextBtn.addEventListener("click", () => {
+                    scrollPosition += 340; // Adjust this value according to card width + margin
+                    if (scrollPosition > slider.scrollWidth - slider.clientWidth) {
+                        scrollPosition = slider.scrollWidth - slider.clientWidth;
+                    }
+                    slider.style.transform = `translateX(-${scrollPosition}px)`;
+                });
+    
+                prevBtn.addEventListener("click", () => {
+                    scrollPosition -= 340; // Adjust this value according to card width + margin
+                    if (scrollPosition < 0) {
+                        scrollPosition = 0;
+                    }
+                    slider.style.transform = `translateX(-${scrollPosition}px)`;
+                });
+                </script>
+            
+            <!-- <div id="images"> -->
+
+            <!-- <div class="ents">
+                <h3>Ratings & Reviews</h3>
+            </div>
+            <div id="images">
+            <div class="scroll-container">
+                <div class="reviews">
+                    <div class="review-card">
+                    <h4>Manaswi Maata</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    
+                    <p class="review-text">
+                        This site is amazing! I love it and would highly recommend it to others.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>kanak kannamma</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        This is a great travelling website i have ever seen.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>Palak patidar</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        The services are accessable at every time which is a great thing.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>Sakshi sharma</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        The contact number seem to busy most of the time.
+                    </p>
+                </div>
+                
+                <div class="review-card">
+                    <h4>Muskan sharma</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        Great work.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>Nikita chouksey</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        Nice.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>Tejaswini choudhary</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        Keep it up, i enjoyed a lot.
+                    </p>
+                </div>
+                <div class="review-card">
+                    <h4>Samruddhi jain</h4>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="review-text">
+                        fabulous job.
+                    </p>
+                </div>
+
+               Add more review cards as needed 
+
+            </div>
+        </div>
+    
+            <button id="prevn-button" class="scroll-button">◀</button>
+            <button id="nextn-button" class="scroll-button">▶</button> -->
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const scrollContainer = document.querySelector(".scroll-container");
+                const reviews = document.querySelector(".reviews");
+                const prevButton = document.getElementById("prevn-button");
+                const nextButton = document.getElementById("nextn-button");
+                const cardWidth = 360; // Adjust this value for the card width including margins
+
+                let scrollPosition = 0;
+                
+                prevButton.addEventListener("click", function () {
+                    scrollPosition -= cardWidth * 4; // Scroll 4 cards at a time
+                    if (scrollPosition < 0) {
+                        scrollPosition = 0;
+                    }
+                    reviews.style.transform = `translateX(-${scrollPosition}px)`;
+                });
+
+                nextButton.addEventListener("click", function () {
+                    const maxScroll = reviews.scrollWidth - scrollContainer.offsetWidth;
+                    scrollPosition += cardWidth * 4; // Scroll 4 cards at a time
+                    if (scrollPosition > maxScroll) {
+                        scrollPosition = maxScroll;
+                    }
+                    reviews.style.transform = `translateX(-${scrollPosition}px)`;
+                });
+            });
+
+            </script>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Booking Tickets</a></li>
+                        <li><a href="#">Guide</a></li>
+                        <li><a href="#">Rental Vehicles</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="tel:+917224885368">Call Me</a></li>
+                        <li><a href="mailto:travelx@gmail.com">Mail me</a></li>
+                        <!-- <li><a href="#"></a></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h5>Travel Your Happiness</h5>
+                     <ul>
+                        <li>Stay Safe</li>
+                        <li>Stay Happy</li>
+                        <li>Stay Healty</li>
+                     </ul>
+                </div>
+                <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p2 class="copyright">TravelX © 2023</p>
+        </div>
+    </footer>
+</div>
+<div id="footer"></div>
+{% endblock %}

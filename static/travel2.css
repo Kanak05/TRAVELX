@@ -1,0 +1,1166 @@
+/* Define a keyframe animation to change the background images */
+@keyframes changeBackground {
+  0% {
+      background-image: url('http://seo.superbmytrip.com/assets/images/5b60d460-d381-4df4-b490-78df9b288b90.jpg');
+  }
+  40% {
+      background-image: url('https://i0.wp.com/www.letsgoforacamp.com/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-24-at-12.30.44-PM.jpeg?resize=1024%2C576&ssl=1');
+  }
+  60% {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Landscape-india.svg/768px-Landscape-india.svg.png?20171209202435');
+  }
+  100%{
+      background-image: url('http://seo.superbmytrip.com/assets/images/5b60d460-d381-4df4-b490-78df9b288b90.jpg'); /* Loop back to the first image */
+  }
+}
+
+.bg1 {
+  animation: changeBackground 20s linear infinite; /* Change every 5 seconds (4 images in 20 seconds) */
+  background-size: cover;
+  min-height: 100px;
+  height: calc(80vh - 72px);
+  transition: background-image 0.5s; /* Add a smooth transition between image changes */
+}
+
+
+/* Style the hero section */
+.hero-content {
+    color: #fff;
+    padding: 33px;
+    text-align: center;
+    position: relative; /* Add this line */
+    height: 66vh; /* Adjust the height to control the positioning */
+   
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content h2 {
+    position: relative;
+    
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Style the form container */
+.quick-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background: rgba(255, 255, 255, 0.8); */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    position: absolute; /* Position relative to the hero content */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust the width */
+}
+
+/* Style input boxes */
+.input-box {
+    flex-basis: calc(23.33% - 30px);
+    margin: 10px;
+    position: relative;
+    font-size: 20px;
+}
+
+.input-box label {
+    display: block;
+    font-weight: bold;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    margin-top: 08px;
+}
+
+/* Style buttons */
+
+
+.quik-form-btn button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-top: 10px;
+    position: absolute; /* Add this line  */
+     top: 100%; /*  Center vertically  */
+     left: 50%; /* Center horizontally  */
+     transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+}
+
+.quik-form-btn button:hover {
+    background-color: #45A049;
+}
+
+/* Style suggestion lists */
+.suggestion-list {
+    list-style: none;
+    padding: 100px;
+   
+}
+
+
+
+/* Reset some default styles for the page */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #f0f3f6;
+    color: #121111;
+    font-family: 'David Libre';
+    font-size: 23px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 20px; */
+    /* max-width: 1100px; */
+    /* margin: 0 auto; */
+}
+
+.logo {
+    color: #d91244;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+    
+}
+
+.nav-links a {
+    color: #d91244;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f04d08;
+}
+
+h3{
+    
+    position: absolute;
+    left: 40%;
+    color: #d91244;
+    top: 40%;
+}
+  
+.button3 {
+  position: absolute;
+  width: 104px;
+  height: 35px;
+  padding: 8px 16px;
+  top: 15%;
+  left: 1135px;
+  font-family: 'David Libre';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 15px;
+  color: #d91244;
+  background-color: #fff;
+  border: 2px solid #d91244;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button3:hover {
+  background-color: #fc0643;
+  color: #fff;
+}
+
+/* Custom styles for the carousel */
+
+/* Decrease the size of carousel images */
+.carousel-item img {
+    max-height: 300px; /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+/* Increase font size of carousel captions */
+.carousel-caption p {
+    font-size: rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #0e0e0e; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow to the text for better visibility */
+}
+
+.carousel-caption {
+    bottom: 100px; /* Adjust the distance from the bottom */
+}
+
+/* ... Your existing CSS rules ... */
+
+.carousel-gap {
+    height: 100px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    z-index: 1; /* Place the gap above the carousel */
+}
+
+.carousel-gap h3 {
+    color: #d91244;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #ec994b;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#tranding {
+  padding: 0rem 0;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 0rem ;
+  }
+}
+
+#tranding .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+  
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 15rem;
+  }
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 0rem;
+  position: relative;
+  
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+ left: 15px;
+ font-size: 30px;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom h4 {
+  position: absolute;
+  /* bottom: 100px; */
+  top: 70px;
+  left: 15px;
+  color: var(--white);
+  font-size: 26px;
+}
+
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #1c1c1d;
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+
+/* Increase the size of "Popular Destinations" text */
+.carousel-gap h3 {
+    font-size: 3rem;
+}
+
+/* Increase the size of "Discover & Book Perfect Tour Package for Your Holidays" text */
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.mycarousel h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d91244;
+    height: 100px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    top: 40px;
+    left: 1%;
+    z-index: 1; /* Place the gap above the carousel */
+}
+
+.cards h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d91244;
+    height: 0px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    top: 65px;
+    left: 1%;
+    z-index: 1; /* Place the gap above the carousel */
+}
+/* holiday theme css */
+body {
+    background-color: #100e17;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .container2 {
+    position: absolute;
+    height: 300px;
+    width: 980px;
+    top: 20000px;
+    left: calc(60% - 750px);
+    display: flex;
+  }
+  
+  .card1 {
+    display: flex;
+    height: 300px;
+    width: 235px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card1:not(:first-child) {
+      margin-left: 0px;
+  }
+  
+  .card1:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card1:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .card1:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+  }
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+  
+  .card1:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  .stories h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d91244;
+    height: 0px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    top: 540px;
+    left: 1%;
+    z-index: 1; /* Place the gap above the carousel */
+}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main {
+        margin: 2%;
+    }
+    
+    .card2 {
+        position: relative;
+        top: 580px;
+        width: 20%;
+        display: inline-block;
+        box-shadow: 2px 2px 20px black;
+        border-radius: 5px;
+        margin: 2%;
+        font-size: 12px;
+        height: 350px; /* Set a fixed height for the card */
+        overflow: hidden; /* Hide content that overflows the fixed height */
+    }
+    
+    .image img {
+        width: 100%;
+        max-height: 60%; /* Set a maximum height for the image */
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    .des {
+        padding: 3px;
+        text-align: center;
+        padding-top: 10px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .event h3{
+        text-align: center;
+        font-size: 3rem;
+        color: #d91244;
+        height: 0px; /* Adjust the height for the gap */
+        background-color: #fff; /* White background */
+        text-align: center;
+        padding-top: 20px;
+        margin-top: -50px; /* Adjust to control the gap size */
+        position: relative;
+        top: 625px;
+        left: 1%;
+        z-index: 1; /* Place the gap above the carousel */ 
+    }
+
+  /* Styles for the slideshow */
+.slideshow-container3 {
+    position: absolute;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+.text3, .date {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Styles for navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Styles for slide indicators (dots) */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.it.act {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.it.act .dec {
+  transform: none;
+  -webkit-transform: none;
+}
+
+.contain {
+  margin-top: -20px;
+  position: relative;
+  top: 560px;
+  z-index: 5;
+  padding: 80px 50px;
+  margin: 15px 0;
+  margin-top: 60px;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.it {  
+  margin: 0 15px 60px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+} 
+
+.it:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.dec p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+  
+}
+
+.dec {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.it.act .dec p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.dec h3 {
+  font-size: 24px;
+  padding: 20px;
+  bottom: 20px;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.it.act {  
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.events h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d91244;
+    height: 0px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    top: 540px;
+    left: 1%;
+    z-index: 1; /* Place the gap above the carousel */
+}
+
+
+
+.si-co {
+    position: relative;
+    padding: 0px;
+    top: 600px;
+    width: 80%;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.si {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.ca {
+    flex: 0 0 300px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ca img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ca h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.ca p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.ca a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.previ{
+    position: absolute;
+    left: 0px;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+
+.nexti{
+  position: absolute;
+  right:0px;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+
+.previ:hover, .nexti:hover {
+    background-color: #0056b3;
+}
+
+.ents h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d91244;
+    height: 0px; /* Adjust the height for the gap */
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -50px; /* Adjust to control the gap size */
+    position: relative;
+    top: 660px;
+    left: 1%;
+    z-index: 1; /* Place the gap above the carousel */
+}
+
+/* Add or modify your existing CSS styles here */
+
+/*  {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+
+.scroll-container {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    top: 750px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.reviews {
+    display: flex;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+    
+}
+
+.review-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 250px;
+	min-width: 250px;
+	height: 300px;
+
+}
+
+.rating {
+    font-size: 20px;
+}
+
+.star {
+	margin-top: 20px;
+    color: #FFD700; /* Yellow color for stars */
+}
+
+.review-text {
+    font-size: 18px;
+    margin-top: 50px;
+	  height: 100%;
+    overflow: hidden;  /* Hide overflow content*/
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: normal; /*Prevent line breaks*/
+    align-items: center;
+}
+
+.scroll-button {
+    font-size: 20px;
+    position: absolute;
+    top: 4300px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#prevn-button {
+  top: 4270px;
+    left: 25px;
+}
+
+#nextn-button {
+  top: 4270px;
+    right: 20px;
+}
+/* footer */
+  .footer-dark {
+    padding: 15px ;
+    color: #f0f9ff;
+    width: 100%;
+    background-color: #282d32;
+    position: relative;
+    top: 500px;
+    height: 250px;
+  }
+  
+  .footer-dark h5 {
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 10px; /* Increase the margin between the heading and sections */
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .footer-dark ul {
+   
+    padding: 0;
+    margin-left: 50px;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item:not(.social) {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom: 36px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item.text {
+      margin-bottom: 0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark .item.social {
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    position: relative;
+    left: -120px;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer-dark .copyright {
+    position: relative;
+    left: -800px;
+    top: 110px;
+    padding-top: 4px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  

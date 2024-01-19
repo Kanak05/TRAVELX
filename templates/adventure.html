@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<style>
+     /* Style the navigation bar */
+  .navbar {
+      background-color: #f0f3f6;
+      color: #121111;
+      font-family: 'David Libre';
+      font-size: 23px;
+  }
+  
+  .containe {
+    position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px 20px; */
+      width: 100%;
+      /* margin: 0 auto; */
+  }
+  
+  .logo {
+      color: #0a0a0a;
+      text-decoration: none;
+      font-size: 34px;
+      font-weight: bold;
+  }
+  
+  .nav-links {
+      list-style: none;
+      display: flex;
+      margin-right: 88px;
+      padding: 0;
+  }
+  
+  .nav-links li {
+      margin-right: 10px;
+      
+  }
+  
+  .nav-links a {
+      color: #0b0b0b;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #3b3939;
+  }
+  
+  h3{
+      
+      position: absolute;
+      left: 40%;
+      color: #0d0c0c;
+      top: 40%;
+  }
+    
+  .button3 {
+    position: absolute;
+    width: 104px;
+    height: 35px;
+    padding: 8px 16px;
+    top: 12%;
+    left: 1144px;
+    font-family: 'David Libre';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 15px;
+    color: #070707;
+    background-color: #fff;
+    border: 2px solid #050505;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button3:hover {
+    background-color: #2e2b2c;
+    color: #fff;
+  }
+
+/* .pt10 {
+  padding-top: 10px;
+} */
+
+/* .pb20 {
+  padding-bottom: 20px;
+} */
+
+ /* .bt1 {
+  border-top: 1px solid #000; /* You can change the color here *
+ } */
+
+/* .bb1 {
+  border-bottom: 1px solid #000; /* You can change the color here *
+} 
+
+.fc2 {
+    color: #727272;
+} 
+ */
+.container {
+  max-width: 100%; /* You can adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  
+}
+
+/* Style for the image */
+.img-item img { 
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5%; 
+}
+
+
+
+/* Style for the headings */
+h1 {
+    padding-left: 15px;
+  font-size: 28px; /* You can adjust the font size */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.fc2,ml4{
+  padding-left: 10px;
+}
+
+/* Style for the container of the price, duration, and tour type */
+.detail-service-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px ;
+  padding-left: 5px;
+}
+
+/* Style for each individual feature (Price, Duration, Tour Type) */
+.df {
+  width: 97%; /* Adjust the width as needed */
+}
+
+/* Style for the icon container */
+.box-centr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 44px; /* Adjust the icon container size */
+  height: 44px; /* Adjust the icon container size */
+  border: 1px solid #000; /* You can change the border color */
+  margin-right: 15px; /* Adjust the margin as needed */
+}
+
+/* Style for the icons themselves */
+.icon {
+  width: 24px; /* Adjust the icon size */
+  height: 24px; /* Adjust the icon size */
+}
+
+/* Style for the information container (Price, Duration, Tour Type) */
+.info {
+  font-weight: bold;
+  position: relative;
+  margin-left: 60px;
+  top:-45px;
+}
+
+.cta-btn {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cta-btn-lft,
+.cta-btn-rght {
+  flex: 1;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.cta-btn-lft {
+  background-color: #fbf8f8; /* Adjust the background color */
+  color: #0a0a0a; /* Adjust the text color */
+  padding: 0px;
+}
+
+.cta-btn-rght {
+  background-color: #007bff; /* Adjust the background color */
+  color: #fff; /* Adjust the text color */
+  padding: 8px;
+}
+
+.cta-btn-lft:hover{
+  background-color: #007bff; /* Adjust the background color on hover */
+}
+
+.cta-btn-rght:hover {
+   background-color: #1717f4;
+}
+
+/* Style for the itinerary section */
+.deatil-itinerary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.head-itinerary {
+  margin-left: 22px;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000; /* Adjust the color as needed */
+}
+
+
+/* Style for each day's accordion item */
+.mb15 {
+  position: relative;
+   width: 100%;
+    margin-bottom: 15px;
+}
+
+
+/* Style for the accordion header */
+.accordion-header {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f7f7f7; /* Adjust the background color as needed */
+    border-radius: 10px;
+    margin-right: 0px; /* Adjust the right margin as needed */
+    cursor: pointer;
+}
+
+/* Style for the day number */
+.fw7.fs16.lh26.mr16 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    margin-right: 16px;
+}
+
+/* Style for the accordion icon */
+.accordion-icon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+
+/* Style for the accordion content */
+.accordion-content {
+    padding: 20px;
+    display: none; /* Hidden by default, toggled open/closed by JavaScript */
+    /* Add any additional styles for the content */
+}
+
+
+.deail-inexclude {
+    background-color: #f5f5f5; /* Adjust the background color as needed */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+/* Style for the section */
+.deail-inexclude {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Style for the section title */
+  .deatil-head {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  /* Style for the inclusion list */
+  .include {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Style for each inclusion item */
+  .include li {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #727272;
+    margin-bottom: 15px;
+  }
+
+  /* Style for the icon image */
+  .include li img.icon {
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+ /* Style for the Accommodation section */
+ .accommodation {
+    margin-bottom: 20px;
+  }
+
+  /* Style for the section title */
+  .head-itinerary {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the Accommodation section */
+  .accommodation {
+    margin-bottom: 20px;
+  }
+
+  /* Style for the section title */
+  .head-itinerary {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the table */
+  .table-content {
+    width: 100%;
+  }
+
+  /* Style for table headers */
+  .table-content th {
+    padding: 10px;
+    background-color: #f5f5f5;
+    text-align: center; /* Center-align header text */
+  }
+
+  /* Style for table rows */
+  .table-content tr {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  /* Style for table cells */
+  .table-content td {
+    padding: 10px;
+    text-align: center; /* Center-align cell content */
+  }
+
+  /* Style for links within the table */
+  .table-content a {
+    text-decoration: none;
+  }
+
+  /* Style for the star rating */
+  .star-rating {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align star rating content */
+  }
+
+  .star-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+
+/* footer */
+.footer-dark {
+    padding: 15px ;
+    color: #f0f9ff;
+    width: 100%;
+    background-color: #282d32;
+    position: relative;
+    top: 0px;
+    height: 250px;
+  }
+  
+  .footer-dark h5 {
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 10px; /* Increase the margin between the heading and sections */
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .footer-dark ul {
+   
+    padding: 0;
+    margin-left: 50px;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item:not(.social) {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom: 36px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item.text {
+      margin-bottom: 0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark .item.social {
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    position: relative;
+    left: -120px;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer-dark .copyright {
+    position: relative;
+    left: 438px;
+    top: 15px;
+    padding-top: 4px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+
+
+/* Additional styles can be added as needed */
+
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="containe">
+      <div class="logo">
+          <a>TravelX</a>
+      </div>
+      <ul class="nav-links">
+          <li class="nav-item">
+              <a class="nav-link" href=""><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#tranding"> <b>Destinations</b></a>
+          </li>
+          <li class="nav-item"> 
+              <a class="nav-link" href="#images"><b>Packages</b></a>
+          </li>
+          <li class="nav-item"> 
+              <a class="nav-link" href="#images"><b>About Us</b></a>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" href="#footer"><b>Contact</b></a>
+        </li>
+      </ul>
+
+      <a class="button3" href="http://127.0.0.1:5500/index.html?#">Sign In</a>
+
+      
+      
+  </div>
+</nav>
+
+
+
+<section class="pt10 pb20 bt1 bb1">
+    
+    <div class="container">
+   <div class="ofh w100">	
+   <div class="deal-detail-head slides df mb20 pt20 simg">
+                <article class="image-slider slide-card ofh br20 mr20 ">
+              <div class="image-slide-items h-centr">
+
+                <div class="img-item">
+                  <img src="tour1.jpg" title="LADAKH, JAMMU AND KASHMIR" loading="lazy" class="gm-loaded gm-observing gm-observing-cb">
+                </div>
+	</div>
+	 </article>
+  </div>
+ </div>
+</div>  <div class="flx100 tal inner-h1">
+
+        <h1>Ladakh Bike Tour in 6 Days</h1>
+        <div class="mb20 df jcsb mt10">
+
+
+          <div class="v-centr fww">
+                        <div class="df mb5">
+              <div class="fs16 fc2 ttc v-centr fww">
+                 <!-- <span class="material-symbols-outlined fch16 ">location_on </span> -- -->
+            <a class="fc2 ml4" href="https://www.hellotravel.com/deals/ujjain">Ladakh</a></div>
+            </div>
+          </div>
+
+          <div class="df">
+          </div>
+        </div>
+      </div> 
+
+
+<div class="detail-service-feature df jcsb fww">
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="currency_rupee_icon.png" alt="Price" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">₹10,000</div>
+        <p class="fw4 fc2 lh22 fs14">Price (per person)</p>
+      </div>
+    </div>
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="schedule_icon.png" alt="Duration" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">6 Days</div>
+        <p class="fw4 fc2 lh22 fs14">Duration</p>
+      </div>
+    </div>
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="groups_icon.png" alt="Tour Type" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">Customized</div>
+        <p class="fw4 fc2 lh22 fs14">Tour Type</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="cta-btn bg1 pt10 pb10 w100 fs12 fw6 ttu bbox-centr zi99">
+    <div class="cta-btn-lft box-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_hide" onclick="check_post_call('233652','129722','+918830625357');">
+      <a href="tel:+918830625357" style="text-decoration: none; color: inherit;">contact agent</a>
+    </div><div>
+    <a href="../package/nikhil.html">
+    <div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" onclick="check_dup_buy('233652','129722','enqr','enq');" id="enq_233652">enquire now</div>
+  </div>
+</div>
+
+ 
+    <div id="itinerary" class="deatil-itinerary mt20 mb">
+      <h2 class="head-itinerary fw7 fs26 lh30 mb20 fc1">
+          Itinerary
+      </h2>
+
+      <div class="iternary-accordion-list">
+        <!-- Day 1 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 1</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Arrival At Leh Airport</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                <span class="material-symbols-outlined fc9 mr8 fs16">
+                 hotel</span>
+                <span class="fc1">
+                   
+                <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span>                                                                                                      </span>  -->
+                </p>
+                <p class="fc2 lh26">
+                  On Arrival at Goa airport railway station, Our Representative assists to transfer you to the booked hotel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 2</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Leh Local Sightseeing</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  One full day sightseeing tour in north goa and enjoy in the fort aguada, baga beach, calangute beach and anjuna beach after that drop back to hotel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 3</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Leh Nubra</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  Leisure Day
+                </p>
+            </div>
+        </div>
+           <!-- Day 4 -->
+           <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 4</span>
+                <p class="fw5 fs18 lh26 fc1 flx1"> Nubra Pangong</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <!-- <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span>
+                    </span>
+                </p> -->
+                <p class="fc2 lh26">
+                  Today is the last day of Tour
+                </p>
+            </div>
+        </div>
+        <!-- Day 5 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 5</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Pangong Leh</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  Leisure Day
+                </p>
+            </div>
+        </div>
+        <!-- Day 6-->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 6</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Leh Airport</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  Leisure Day
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="scrip.js"></script>
+      </div>
+  </div>
+
+  <div class="deail-inexclude">
+    <h2 class="deatil-head fw7 fs26 lh30 mb20 fc1">Inclusions</h2>
+    <div class="df">
+      <div class="pr15">
+        <ul class="include" id="inexclude">
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="restaurant_icon.png" alt="Restaurant" class="icon">
+            Breakfast + Dinner
+          </li>
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="hotel_icon.png" alt="Hotel" class="icon">
+            Accommodation
+          </li>
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="hiking_icon.png" alt="Hiking" class="icon">
+            Sightseeing
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+
+
+ 
+
+
+<div class="cta-btn bg1 pt10 pb10 w100 fs12 fw6 ttu bbox-centr zi99">    
+  <div class="cta-btn-lft box-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_hide" onclick="check_post_call('233652','129722','+918048734235');">
+    contact agent
+  </div>
+   <a href="tel:+918048734235" class="cta-btn-lft bbox-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_show" style="display:none;">08048734235</a>
+<div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" onclick="check_dup_buy('233652','129722','enq3r','enq3');" id="enq3_233652">
+    enquire now
+  </div>
+ <!-- <div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" style="display:none;" id="enq3r_233652">
+    Sent -->
+  </div>
+</div>
+
+
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h5>Services</h5>
+                  <ul>
+                      <li><a href="#">Booking Tickets</a></li>
+                      <li><a href="#">Guide</a></li>
+                      <li><a href="#">Rental Vehicles</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h5>About</h5>
+                  <ul>
+                      <li><a href="tel:+919996660666">Call Me</a></li>
+                      <li><a href="mailto:travelx@gmail.com">Mail me</a></li>
+                      <!-- <li><a href="#"></a></li> -->
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h5>Travel Your Happiness</h5>
+                   <ul>
+                      <li>Stay Safe</li>
+                      <li>Stay Happy</li>
+                      <li>Stay Healty</li>
+                   </ul>
+              </div>
+              <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+          </div>
+          <p> class="copyright">TravelX © 2023</p>
+      </div>
+  </footer>
+</div>
+<div id="footer"></div>
