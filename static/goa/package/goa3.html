@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<style>
+     /* Style the navigation bar */
+  .navbar {
+      background-color: #f0f3f6;
+      color: #121111;
+      font-family: 'David Libre';
+      font-size: 23px;
+  }
+  
+  .containe {
+    position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px 20px; */
+      width: 100%;
+      /* margin: 0 auto; */
+  }
+  
+  .logo {
+      color: #0a0a0a;
+      text-decoration: none;
+      font-size: 34px;
+      font-weight: bold;
+  }
+  
+  .nav-links {
+      list-style: none;
+      display: flex;
+      margin-right: 88px;
+      padding: 0;
+  }
+  
+  .nav-links li {
+      margin-right: 10px;
+      
+  }
+  
+  .nav-links a {
+      color: #0b0b0b;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #3b3939;
+  }
+  
+  h3{
+      
+      position: absolute;
+      left: 40%;
+      color: #0d0c0c;
+      top: 40%;
+  }
+    
+  .button3 {
+    position: absolute;
+    width: 104px;
+    height: 35px;
+    padding: 8px 16px;
+    top: 12%;
+    left: 1144px;
+    font-family: 'David Libre';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 15px;
+    color: #070707;
+    background-color: #fff;
+    border: 2px solid #050505;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button3:hover {
+    background-color: #2e2b2c;
+    color: #fff;
+  }
+
+/* .pt10 {
+  padding-top: 10px;
+} */
+
+/* .pb20 {
+  padding-bottom: 20px;
+} */
+
+ /* .bt1 {
+  border-top: 1px solid #000; /* You can change the color here *
+ } */
+
+/* .bb1 {
+  border-bottom: 1px solid #000; /* You can change the color here *
+} 
+
+.fc2 {
+    color: #727272;
+} 
+ */
+.container {
+  max-width: 100%; /* You can adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  
+}
+
+/* Style for the image */
+.img-item img { 
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5%; 
+}
+
+
+
+/* Style for the headings */
+h1 {
+    padding-left: 15px;
+  font-size: 28px; /* You can adjust the font size */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.fc2,ml4{
+  padding-left: 10px;
+}
+
+/* Style for the container of the price, duration, and tour type */
+.detail-service-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px ;
+  padding-left: 5px;
+}
+
+/* Style for each individual feature (Price, Duration, Tour Type) */
+.df {
+  width: 97%; /* Adjust the width as needed */
+}
+
+/* Style for the icon container */
+.box-centr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 44px; /* Adjust the icon container size */
+  height: 44px; /* Adjust the icon container size */
+  border: 1px solid #000; /* You can change the border color */
+  margin-right: 15px; /* Adjust the margin as needed */
+}
+
+/* Style for the icons themselves */
+.icon {
+  width: 24px; /* Adjust the icon size */
+  height: 24px; /* Adjust the icon size */
+}
+
+/* Style for the information container (Price, Duration, Tour Type) */
+.info {
+  font-weight: bold;
+  position: relative;
+  margin-left: 60px;
+  top:-45px;
+}
+
+.cta-btn {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cta-btn-lft,
+.cta-btn-rght {
+  flex: 1;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.cta-btn-lft {
+  background-color: #fbf8f8; /* Adjust the background color */
+  color: #0a0a0a; /* Adjust the text color */
+  padding: 0px;
+}
+
+.cta-btn-rght {
+  background-color: #007bff; /* Adjust the background color */
+  color: #fff; /* Adjust the text color */
+  padding: 8px;
+}
+
+.cta-btn-lft:hover{
+  background-color: #007bff; /* Adjust the background color on hover */
+}
+
+.cta-btn-rght:hover {
+   background-color: #1717f4;
+}
+
+/* Style for the itinerary section */
+.deatil-itinerary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.head-itinerary {
+  margin-left: 22px;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000; /* Adjust the color as needed */
+}
+
+
+/* Style for each day's accordion item */
+.mb15 {
+  position: relative;
+   width: 100%;
+    margin-bottom: 15px;
+}
+
+
+/* Style for the accordion header */
+.accordion-header {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f7f7f7; /* Adjust the background color as needed */
+    border-radius: 10px;
+    margin-right: 0px; /* Adjust the right margin as needed */
+    cursor: pointer;
+}
+
+/* Style for the day number */
+.fw7.fs16.lh26.mr16 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    margin-right: 16px;
+}
+
+/* Style for the accordion icon */
+.accordion-icon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+
+/* Style for the accordion content */
+.accordion-content {
+    padding: 20px;
+    display: none; /* Hidden by default, toggled open/closed by JavaScript */
+    /* Add any additional styles for the content */
+}
+
+
+.deail-inexclude {
+    background-color: #f5f5f5; /* Adjust the background color as needed */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+/* Style for the section */
+.deail-inexclude {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Style for the section title */
+  .deatil-head {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  /* Style for the inclusion list */
+  .include {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Style for each inclusion item */
+  .include li {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #727272;
+    margin-bottom: 15px;
+  }
+
+  /* Style for the icon image */
+  .include li img.icon {
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+ /* Style for the Accommodation section */
+ .accommodation {
+    margin-bottom: 20px;
+  }
+
+  /* Style for the section title */
+  .head-itinerary {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the Accommodation section */
+  .accommodation {
+    margin-bottom: 20px;
+  }
+
+  /* Style for the section title */
+  .head-itinerary {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the table */
+  .table-content {
+    width: 100%;
+  }
+
+  /* Style for table headers */
+  .table-content th {
+    padding: 10px;
+    background-color: #f5f5f5;
+    text-align: center; /* Center-align header text */
+  }
+
+  /* Style for table rows */
+  .table-content tr {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  /* Style for table cells */
+  .table-content td {
+    padding: 10px;
+    text-align: center; /* Center-align cell content */
+  }
+
+  /* Style for links within the table */
+  .table-content a {
+    text-decoration: none;
+  }
+
+  /* Style for the star rating */
+  .star-rating {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align star rating content */
+  }
+
+  .star-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+
+/* footer */
+.footer-dark {
+    padding: 15px ;
+    color: #f0f9ff;
+    width: 100%;
+    background-color: #282d32;
+    position: relative;
+    top: 0px;
+    height: 250px;
+  }
+  
+  .footer-dark h5 {
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 10px; /* Increase the margin between the heading and sections */
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .footer-dark ul {
+   
+    padding: 0;
+    margin-left: 50px;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item:not(.social) {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom: 36px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item.text {
+      margin-bottom: 0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark .item.social {
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    position: relative;
+    left: -120px;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer-dark .copyright {
+    position: relative;
+    left: 438px;
+    top: 15px;
+    padding-top: 4px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+
+
+/* Additional styles can be added as needed */
+
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="containe">
+      <div class="logo">
+          <a>TravelX</a>
+      </div>
+      <ul class="nav-links">
+          <li class="nav-item">
+              <a class="nav-link" href=""><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#tranding"> <b>Destinations</b></a>
+          </li>
+          <li class="nav-item"> 
+              <a class="nav-link" href="#images"><b>Packages</b></a>
+          </li>
+          <li class="nav-item"> 
+              <a class="nav-link" href="#images"><b>About Us</b></a>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" href="#footer"><b>Contact</b></a>
+        </li>
+      </ul>
+
+      <a class="button3" href="http://127.0.0.1:5500/index.html?#">Sign In</a>
+
+      
+      
+  </div>
+</nav>
+
+
+
+<section class="pt10 pb20 bt1 bb1">
+    
+    <div class="container">
+   <div class="ofh w100">	
+   <div class="deal-detail-head slides df mb20 pt20 simg">
+                <article class="image-slider slide-card ofh br20 mr20 ">
+              <div class="image-slide-items h-centr">
+
+                <div class="img-item">
+                  <img src="data:image/jpeg;base64,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" title="Cheap Goa Tour Package With Dinner,North Goa" loading="lazy" class="gm-loaded gm-observing gm-observing-cb">
+                </div>
+	</div>
+	 </article>
+  </div>
+ </div>
+</div>  <div class="flx100 tal inner-h1">
+
+        <h1>Amazing 4 Days Goa Tour Package by Atithi on Trip</h1>
+        <div class="mb20 df jcsb mt10">
+
+
+          <div class="v-centr fww">
+                        <div class="df mb5">
+              <div class="fs16 fc2 ttc v-centr fww">
+                 <!-- <span class="material-symbols-outlined fch16 ">location_on </span> -- -->
+            <a class="fc2 ml4" href="#">Goa</a></div>
+            </div>
+          </div>
+
+          <div class="df">
+          </div>
+        </div>
+      </div> 
+
+
+<div class="detail-service-feature df jcsb fww">
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="currency_rupee_icon.png" alt="Price" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">₹18,000</div>
+        <p class="fw4 fc2 lh22 fs14">Price (per person)</p>
+      </div>
+    </div>
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="schedule_icon.png" alt="Duration" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">4 Days</div>
+        <p class="fw4 fc2 lh22 fs14">Duration</p>
+      </div>
+    </div>
+    <div class="df w30">
+      <div class="box-centr br10 w44 h44 brd1 bg1 cp mr16">
+        <img src="groups_icon.png" alt="Tour Type" class="icon">
+      </div>
+      <div class="info">
+        <div class="fw7 fs16 lh26">Customized</div>
+        <p class="fw4 fc2 lh22 fs14">Tour Type</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="cta-btn bg1 pt10 pb10 w100 fs12 fw6 ttu bbox-centr zi99">
+    <div class="cta-btn-lft box-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_hide" onclick="check_post_call('233652','129722','+918830625357');">
+      <a href="tel:+918830625357" style="text-decoration: none; color: inherit;">contact agent</a>
+    </div><div>
+    <a href="../package/nikhil.html">
+    <div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" onclick="check_dup_buy('233652','129722','enqr','enq');" id="enq_233652">enquire now</div>
+  </div>
+</div>
+
+ 
+    <div id="itinerary" class="deatil-itinerary mt20 mb">
+      <h2 class="head-itinerary fw7 fs26 lh30 mb20 fc1">
+          Itinerary
+      </h2>
+
+      <div class="iternary-accordion-list">
+        <!-- Day 1 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 1</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">Goa</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                <span class="material-symbols-outlined fc9 mr8 fs16">
+                 hotel</span>
+                <span class="fc1">
+                Similar    
+                <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span>                                                                                                      </span>  -->
+                </p>
+                <p class="fc2 lh26">
+                  On Arrival at Goa airport railway station, Our Representative assists to transfer you to the booked hotel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 2</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">North Goa</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  One full day sightseeing tour in north goa and enjoy in the fort aguada, baga beach, calangute beach and anjuna beach after that drop back to hotel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 3</span>
+                <p class="fw5 fs18 lh26 fc1 flx1">south Goa</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <!-- <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span> -->
+                    </span>
+                </p>
+                <p class="fc2 lh26">
+                  Leisure Day
+                </p>
+            </div>
+        </div>
+           <!-- Day 4 -->
+           <div class="mb15 cp br10 bg1 df b1 df fdc accordion brd1">
+            <div class="df p20 accordion-header aic jcsb">
+                <span class="fw7 fs16 lh26 mr16 brd1 pt10 pb10 pl20 pr20 br10 bg1 fc6">Day 4</span>
+                <p class="fw5 fs18 lh26 fc1 flx1"> Goa</p>
+                <span class="accordion-icon fs28 fw4 fc6">+</span>
+            </div>
+            <div class="p20 accordion-content">
+                <!-- <p class="v-centr fc2 lh26 mb20">
+                    <span class="material-symbols-outlined fc9 mr8 fs16">
+                        hotel
+                    </span>
+                    <span class="fc1">
+                        Similar
+                        <span class="fw7 bg9 pt10 pb10 pl15 pr15 fc3 br10 dif aic">3<span class="material-symbols-outlined fch16">star</span></span>
+                    </span>
+                </p> -->
+                <p class="fc2 lh26">
+                  Today is the last day of Tour
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="scrip.js"></script>
+      </div>
+  </div>
+
+  <div class="deail-inexclude">
+    <h2 class="deatil-head fw7 fs26 lh30 mb20 fc1">Inclusions</h2>
+    <div class="df">
+      <div class="pr15">
+        <ul class="include" id="inexclude">
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="restaurant_icon.png" alt="Restaurant" class="icon">
+            Breakfast + Dinner
+          </li>
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="hotel_icon.png" alt="Hotel" class="icon">
+            Accommodation
+          </li>
+          <li class="v-centr fw4 fs16 fc2 mb15 lh26">
+            <img src="hiking_icon.png" alt="Hiking" class="icon">
+            Sightseeing
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<div class="accommodation mb" id="accommodation">
+  <h2 class="head-itinerary fw7 fs26 lh30 fc1 mb20"> Accommodation</h2>
+  <a name="accommodation"></a>
+  <div class="ofa table-content">
+    <table cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <th class="p10 bg6">Place</th>
+          <th class="p10 bg6">Hotel</th>
+          <th class="p10 bg6">Star</th>
+          <th class="p10 bg6">Days</th>
+        </tr>
+        <tr>
+          <td class="p10">
+            <a style="text-decoration: none" href="https://www.hellotravel.com/deals/ujjain" target="_blank">Goa</a>
+          </td>
+          <td class="p10">Neelam The Grand</td>
+          <td class="p10">
+            <div class="star-rating">
+              <img src="star_icon.png" alt="Star" class="star-icon">
+              3
+            </div>
+          </td>
+          <td class="p10">Day 1</td>
+        </tr>
+        <tr>
+          <td class="p10">
+            <a style="text-decoration: none" href="https://www.hellotravel.com/deals/ujjain" target="_blank">North Goa</a>
+          </td>
+          <td class="p10">Neelam The Grand</td>
+          <td class="p10">
+            <div class="star-rating">
+              <img src="star_icon.png" alt="Star" class="star-icon">
+              3
+            </div>
+          </td>
+          <td class="p10">Day 2</td>
+        </tr>
+        <tr>
+          <td class="p10">
+            <a style="text-decoration: none" href="https://www.hellotravel.com/deals/indore" target="_blank">Goa</a>
+          </td>
+          <td class="p10">Neelam The Grand</td>
+          <td class="p10">
+            <div class="star-rating">
+              <img src="star_icon.png" alt="Star" class="star-icon">
+              3
+            </div>
+          </td>
+          <td class="p10">Day 3</td>
+        </tr>
+
+        <tr>
+          <td class="p10">
+            <a style="text-decoration: none" href="https://www.hellotravel.com/deals/indore" target="_blank">Goa</a>
+          </td>
+          <td class="p10">Neelam The Grand</td>
+          <td class="p10">
+            <div class="star-rating">
+              <img src="star_icon.png" alt="Star" class="star-icon">
+              3
+            </div>
+          </td>
+          <td class="p10">Day 4</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="cta-btn bg1 pt10 pb10 w100 fs12 fw6 ttu bbox-centr zi99">    
+  <div class="cta-btn-lft box-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_hide" onclick="check_post_call('233652','129722','+918048734235');">
+    contact agent
+  </div>
+   <a href="tel:+918048734235" class="cta-btn-lft bbox-centr flx1 mlr1p flx48 bg1 br6 hvr2 brd2 h48 cp fc6 fs14 918048734235_show" style="display:none;">08048734235</a>
+<div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" onclick="check_dup_buy('233652','129722','enq3r','enq3');" id="enq3_233652">
+    enquire now
+  </div>
+ <!-- <div class="cta-btn-rght bbox-centr flx1 mlr1p flx48 bg7 br6 hvr1 fc3 h48 cp fs14" style="display:none;" id="enq3r_233652">
+    Sent -->
+  </div>
+</div>
+
+
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h5>Services</h5>
+                  <ul>
+                      <li><a href="#">Booking Tickets</a></li>
+                      <li><a href="#">Guide</a></li>
+                      <li><a href="#">Rental Vehicles</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h5>About</h5>
+                  <ul>
+                      <li><a href="tel:+919996660666">Call Me</a></li>
+                      <li><a href="mailto:travelx@gmail.com">Mail me</a></li>
+                      <!-- <li><a href="#"></a></li> -->
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h5>Travel Your Happiness</h5>
+                   <ul>
+                      <li>Stay Safe</li>
+                      <li>Stay Happy</li>
+                      <li>Stay Healty</li>
+                   </ul>
+              </div>
+              <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+          </div>
+          <p2 class="copyright">TravelX © 2023</p>
+      </div>
+  </footer>
+</div>
+<div id="footer"></div>
