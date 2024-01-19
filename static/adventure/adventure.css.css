@@ -1,0 +1,302 @@
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+h1{
+    color: white;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
+}
+section{
+    color: white;
+    background-color: rgb(45,45,45);
+    padding: 5rem o;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+.heading1{
+    font-size: 5rem;
+    padding: 0 10rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.text{
+    font-size: 1.5rem;
+    margin: 5rem 0;
+    padding: 0 10rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+.heading2{
+    position: absolute;
+    color: black;
+    background-color: white;
+    font-size: 3.5rem;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: 600;
+}
+
+/* @gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%); */
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: darkslategray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-setting: "liga" on;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: rgb(32, 32, 31);
+  border: 1px solid rgb(255, 255, 255);
+  /* //border-radius: 1rem; */
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  /* //filter: saturate(180%); */
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; 
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; 
+    }
+  }
+}
+
+.card__image--flowers {
+  background-image: url(adv2.jpeg);
+}
+
+.card__image--river {
+  background-image: url(adv3.jpeg);
+}
+
+.card__image--record {
+  background-image: url(adv4.webp);
+}
+
+.card__image--fence {
+  background-image: url(adv5.jpeg);
+}
+.card__image--adv5 {
+    background-image: url(adv6.webp);
+ }
+  .card__image--adv6 {
+    background-image: url(adv7.webp);
+}
+
+.card__title {
+  color: darkslategray;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color: black;
+}
+.card__image--bike1 {
+    background-image: url(bike1.jpg);
+  }
+  
+  .card__image--bike2 {
+    background-image: url(bike2.jpg);
+  }
+  
+  .card__image--bike3 {
+    background-image: url(bike3.jpg);
+  }
+  
+  .card__image--bike4 {
+    background-image: url(bike4.jpg);
+  }
+  .card__image--bike5 {
+    background-image: url(bike5.avif);
+  }
+  .card__image--bike6 {
+    background-image: url(bike6.avif);
+  }
+
+
+  .card__image--para1 {
+    background-image: url(para1.jpg);
+  }
+  
+  .card__image--para2 {
+    background-image: url(para2.jpg);
+  }
+  
+  .card__image--para3 {
+    background-image: url(para3.jpg);
+  }
+  
+  .card__image--para4 {
+    background-image: url(para4.jpg);
+  }
+  .card__image--para5 {
+    background-image: url(para5.jpg);
+  }
+  .card__image--para6 {
+    background-image: url(para6.jpg);
+  }
+
+  .card__image--surf1 {
+    background-image: url(surf1.webp);
+  }
+  
+  .card__image--surf2 {
+    background-image: url(surf2.webp);
+  }
+  
+  .card__image--surf3 {
+    background-image: url(surf3.webp);
+  }
+  
+  .card__image--surf4 {
+    background-image: url(surf4.webp);
+  }
+  .card__image--surf5 {
+    background-image: url(surf5.jpeg);
+  }
+  
+  .card__image--surf6 {
+    background-image: url(surf6.webp);
+  }
